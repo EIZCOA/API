@@ -1,0 +1,14 @@
+--Se requiere que el api tenga todas las funciones de un CRUD--
+
+--Entorno orientado a PHP y debe devolver un JSON--
+
+--Metodos a crear:
+--getproducts
+--getusers
+--getcategory
+--getorders
+--verify(verifco login usuarios (en proceso))	
+
+
+--Ejmplo de crwcion de una api encontrada en https://www.youtube.com/watch?v=DhF_MNMcPtg
+--https://github.com/marcosrivasr/Curso-PHP-MySQL
