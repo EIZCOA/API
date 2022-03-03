@@ -21,7 +21,7 @@ class ApiCustomer{
                     "nombre" => $row['nombre'],
                     "apellido" => $row['apellido'],
                     "f_nac" => $row['f_nac'],
-                    "status" => $row['status'],
+                    "estado" => $row['estado'],
                     "genero" => $row['genero'],
                 );
                 array_push($clientes["items"], $item);
@@ -49,7 +49,7 @@ class ApiCustomer{
                 "nombre" => $row['nombre'],
                 "apellido" => $row['apellido'],
                 "f_nac" => $row['f_nac'],
-                "status" => $row['status'],
+                "estado" => $row['estado'],
                 "genero" => $row['genero'],
             );
             array_push($clientes["items"], $item);

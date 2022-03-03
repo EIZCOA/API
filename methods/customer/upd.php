@@ -17,7 +17,7 @@ $error = '';
         isset($_POST['nombre']);
         isset($_POST['apellido']);
         isset($_POST['f_nac']);
-        isset($_POST['status']);
+        isset($_POST['estado']);
         isset($_POST['genero']);
         isset($_POST['id_cliente']);
 
@@ -28,7 +28,7 @@ $error = '';
             'nombre' => $_POST['nombre'],
             'apellido' => $_POST['apellido'],
             'f_nac' => $_POST['f_nac'],
-            'status' => $_POST['status'],
+            'estado' => $_POST['estado'],
             'genero' => $_POST['genero'],
             'id_cliente' => $_POST['id_cliente']
             
