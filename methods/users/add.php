@@ -13,25 +13,24 @@ $error = '';
 
         //Aqui inicializo variables de mi POST
 
-        isset($_POST['id_usuario']);
+        isset($_POST['alias']);
         isset($_POST['nombre']);
-        isset($_POST['apellido']);
-        isset($_POST['f_nac']);
-        isset($_POST['status']);
-        isset($_POST['genero']);
-        isset($_POST['id_cliente']);
+        isset($_POST['f_creacion']);
+        isset($_POST['contrasena']);
+        isset($_POST['estado']);
+        isset($_POST['id_tipo_usuario']);
 
-        //Mapeo los datos que viajan en mi POST para mandarlos a el metodo de agregar clientes    
+        //Mapeo los datos que viajan en mi POST para mandarlos a el metodo de agregar usuarios    
         $item = array(
-            'id_usuario' => $_POST['id_usuario'],
+            'alias' => $_POST['alias'],
             'nombre' => $_POST['nombre'],
-            'apellido' => $_POST['apellido'],
-            'f_nac' => $_POST['f_nac'],
-            'status' => $_POST['status'],
-            'genero' => $_POST['genero']
+            'f_creacion' => $_POST['f_creacion'],
+            'contrasena' => $_POST['contrasena'],
+            'estado' => $_POST['estado'],
+            'id_tipo_usuario' => $_POST['id_tipo_usuario']
             
         );
-        //Llamo el metdo add de mi clase APICustomer
+        //Llamo el metdo add de mi clase APIUsuarios
         $api->add($item);
 
     }else
