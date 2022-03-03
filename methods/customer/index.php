@@ -1,7 +1,7 @@
 <?php
-    include_once 'apiusuarios.php';
+    include_once 'apiCustomer.php';
 
-    $api = new ApiUsuarios();
+    $api = new ApiCustomer();
 
 //Validamos el tipo de peticion, si la variable id esta definidida buscamos un uusarios
 //en especifico, caso contrario devolvemos todo
