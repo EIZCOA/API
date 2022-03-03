@@ -36,14 +36,14 @@ class Customers extends DB{
                 :nombre, 
                 :apellido, 
                 :f_nac , 
-                :status , 
+                :estado , 
                 :genero);
                 ');
         $query->execute([
             'id_usuario' =>  $cliente['id_usuario'],
             'nombre' => $cliente['nombre'],
             'apellido' => $cliente['apellido'],
-            'status' => $cliente['status'],
+            'estado' => $cliente['estado'],
             'f_nac' => $cliente['f_nac'],
             'genero' => $cliente['genero'],
             'id_cliente' => $cliente['id_cliente']]);
@@ -56,7 +56,7 @@ class Customers extends DB{
         nombre = :nombre , 
         apellido = :apellido, 
         f_nac = :f_nac,
-        status = :status, 
+        estado = :estado, 
         genero = :genero , 
         WHERE 
         id_cliente = :id_cliente'
@@ -67,7 +67,7 @@ class Customers extends DB{
             'nombre' => $cliente['nombre'],
             'apellido' => $cliente['apellido'],
             'f_nac' => $cliente['f_nac'],
-            'status' => $cliente['status'],
+            'estado' => $cliente['estado'],
             'genero' => $cliente['genero'],
             'id_cliente' => $cliente['id_cliente']
         ]);
