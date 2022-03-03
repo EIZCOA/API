@@ -30,8 +30,24 @@ class Usuarios extends DB{
     }
 
     function updUsuario($usuario){
-        $query = $this->connect()->prepare('UPDATE usuarios SET alias = :alias , nombre = :nombre , f_creacion = :f_creacion, contrasena = :contrasena, estado = :estado , id_tipo_usuario = :id_tipo_usuario WHERE id_usuario = :id_usuario');
-        $query->execute(['alias' => $usuario['alias'],'nombre' => $usuario['nombre'],'f_creacion' => $usuario['f_creacion'],'contrasena' => $usuario['contrasena'],'estado' => $usuario['estado'],'id_tipo_usuario' => $usuario['id_tipo_usuario'], 'id_usuario' => $usuario['id_usuario']]);
+        $query = $this->connect()->prepare(
+            'UPDATE usuarios SET 
+            alias = :alias , 
+            nombre = :nombre , 
+            f_creacion = :f_creacion, 
+            contrasena = :contrasena, 
+            estado = :estado , 
+            id_tipo_usuario = :id_tipo_usuario 
+            WHERE id_usuario = :id_usuario');
+
+        $query->execute([
+            'alias' => $usuario['alias'],
+            'nombre' => $usuario['nombre'],
+            'f_creacion' => $usuario['f_creacion'],
+            'contrasena' => $usuario['contrasena'],
+            'estado' => $usuario['estado'],
+            'id_tipo_usuario' => $usuario['id_tipo_usuario'], 
+            'id_usuario' => $usuario['id_usuario']]);
         return $query;
     }
 

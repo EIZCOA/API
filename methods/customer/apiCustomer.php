@@ -16,7 +16,7 @@ class ApiCustomer{
             while ($row = $res->fetch(PDO::FETCH_ASSOC)){
     
                 $item=array(
-                    "id" => $row['id_cliente'],
+                    "id_cliente" => $row['id_cliente'],
                     "id_usuario" => $row['id_usuario'],
                     "nombre" => $row['nombre'],
                     "apellido" => $row['apellido'],
@@ -44,7 +44,7 @@ class ApiCustomer{
             $row = $res->fetch();
         
             $item=array(
-                "id" => $row['id_cliente'],
+                "id_cliente" => $row['id_cliente'],
                 "id_usuario" => $row['id_usuario'],
                 "nombre" => $row['nombre'],
                 "apellido" => $row['apellido'],

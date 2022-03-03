@@ -30,14 +30,14 @@ class Customers extends DB{
                 nombre, 
                 apellido, 
                 f_nac, 
-                status, 
+                estado, 
                 genero) VALUES (
                 :id_usuario , 
                 :nombre, 
                 :apellido, 
                 :f_nac , 
                 :estado , 
-                :genero);
+                :genero)
                 ');
         $query->execute([
             'id_usuario' =>  $cliente['id_usuario'],
@@ -45,22 +45,21 @@ class Customers extends DB{
             'apellido' => $cliente['apellido'],
             'estado' => $cliente['estado'],
             'f_nac' => $cliente['f_nac'],
-            'genero' => $cliente['genero'],
-            'id_cliente' => $cliente['id_cliente']]);
+            'genero' => $cliente['genero'],]);
         return $query;
     }
 
     function updCliente($cliente){
-        $query = $this->connect()->prepare('UPDATE clientes SET 
-        id_usuario = :id_usuario , 
-        nombre = :nombre , 
-        apellido = :apellido, 
-        f_nac = :f_nac,
-        estado = :estado, 
-        genero = :genero , 
-        WHERE 
-        id_cliente = :id_cliente'
-        );
+        $query = $this->connect()->prepare(
+            'UPDATE clientes SET 
+            id_usuario = :id_usuario,
+            nombre = :nombre , 
+            apellido = :apellido, 
+            f_nac = :f_nac,
+            estado = :estado, 
+            genero = :genero 
+            WHERE 
+            id_cliente = :id_cliente');
 
         $query->execute([
             'id_usuario' => $cliente['id_usuario'],
