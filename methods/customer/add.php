@@ -1,7 +1,7 @@
 <?php
 
-include_once 'apiusuarios.php';
-$api = new ApiUsuarios();
+include_once 'apiCustomer.php';
+$api = new ApiCustomer();
 
 $nombre = '';
 $error = '';
