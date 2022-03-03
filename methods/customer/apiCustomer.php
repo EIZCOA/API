@@ -24,10 +24,10 @@ class ApiCustomer{
                     "status" => $row['status'],
                     "genero" => $row['genero'],
                 );
-                array_push($cliente["items"], $item);
+                array_push($clientes["items"], $item);
             }
         
-            echo json_encode($cliente);
+            echo json_encode($clientes);
         }else{
             echo json_encode(array('mensaje' => 'No hay elementos'));
         }
